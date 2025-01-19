@@ -12,8 +12,8 @@ class Updates {
 	public function __construct( $hub, $uid, $version ) {
 		$this->remote_response = get_transient( 'afca_the_rate_framework_update_api_response' );
 		$this->update_hub      = $hub;
-		$this->theme_name     = $uid;
-		$this->theme_version  = $version;
+		$this->theme_name      = $uid;
+		$this->theme_version   = $version;
 
 		add_filter( 'site_transient_update_themes', [ $this, 'get_theme_updates' ] );
 	}
@@ -27,7 +27,7 @@ class Updates {
 		}
 
 		// Prepare the theme update data as an array.
-		$theme_slug = $this->theme_name; // The theme's directory name.
+		$theme_slug  = $this->theme_name; // The theme's directory name.
 		$update_data = [
 			'new_version'    => $this->remote_response->version,
 			'package'        => $this->remote_response->url, // Download URL.
