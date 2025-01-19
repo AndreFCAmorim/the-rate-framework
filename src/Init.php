@@ -14,6 +14,8 @@ class Init {
 		$this->theme_version = $theme_version;
 
 		$this->set_theme_update();
+
+		$this->include_theme_blocks();
 	}
 
 	/**
@@ -33,5 +35,16 @@ class Init {
 		if ( ! wp_next_scheduled( 'afca_the_rate_framework_updates' ) ) {
 			wp_schedule_event( current_time( 'timestamp' ), 'daily', 'afca_the_rate_framework_updates' );
 		}
+	}
+
+	/**
+	 * Include the theme blocks from the theme path.
+	 *
+	 * This method is used to include the theme blocks that are present in the theme
+	 * directory. The theme blocks are used to generate the dynamic content for the
+	 * blocks in the theme.
+	 */
+	private function include_theme_blocks() {
+		new Blocks\Blocks( $this->theme_path );
 	}
 }
