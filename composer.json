@@ -1,0 +1,26 @@
+{
+  "name": "afca-themes/the-rate-framework",
+  "description": "",
+  "type": "wordpress-theme",
+  "autoload": {
+    "psr-4": {
+      "Afca\\Themes\\TheRateFramework\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "André Amorim",
+      "email": "contact@andreamorim.site"
+    }
+  ],
+  "require-dev": {
+	"wp-coding-standards/wpcs": "3.0.0",
+    "phpcsstandards/phpcsutils": "^1.0",
+    "phpcsstandards/phpcsextra": "1.2.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
