@@ -16,6 +16,15 @@ class Init {
 		$this->set_theme_update();
 
 		$this->include_theme_blocks();
+
+		// Third-party plugins
+		new ThirdParties(
+			[
+				'lottiefiles',
+				'secure-custom-fields',
+				'wordfence'
+			]
+		);
 	}
 
 	/**
