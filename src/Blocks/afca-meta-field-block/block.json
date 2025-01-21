@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "afca-blocks/meta-field",
+  "version": "0.1",
+  "title": "Meta Field Block",
+  "category": "theme",
+  "icon": "admin-links",
+  "description": "Display a meta field from a post.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "metaKey": {
+      "type": "string",
+      "default": ""
+    },
+    "renderType": {
+      "type": "string",
+      "default": "text"
+    },
+    "showTextAdjacency": {
+      "type": "boolean",
+      "default": false
+    },
+    "beforeText": {
+      "type": "string",
+      "default": ""
+    },
+    "afterText": {
+      "type": "string",
+      "default": ""
+    },
+    "altText": {
+      "type": "string",
+      "default": ""
+    },
+    "openLinkNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "textLink": {
+      "default": "",
+      "type": "string"
+    },
+    "imgAltText": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "usesContext": [
+    "query",
+    "postId"
+  ],
+  "textdomain": "afca-meta-field-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
