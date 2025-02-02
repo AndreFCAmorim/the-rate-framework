@@ -17,6 +17,8 @@ class Init {
 
 		$this->include_theme_blocks();
 
+		$this->include_shortcodes();
+
 		// Third-party plugins
 		new ThirdParties(
 			[
@@ -55,5 +57,16 @@ class Init {
 	 */
 	private function include_theme_blocks() {
 		new Blocks\Blocks( $this->theme_path );
+	}
+
+	/**
+	 * Include the theme shortcodes from the theme path.
+	 *
+	 * This method is used to include the theme shortcodes that are present in the theme
+	 * directory. The theme shortcodes are used to generate the dynamic content for the
+	 * shortcodes in the theme.
+	 */
+	private function include_shortcodes() {
+		new Shortcodes\Shortcodes();
 	}
 }

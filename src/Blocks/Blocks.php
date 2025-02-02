@@ -16,13 +16,12 @@ class Blocks {
 		add_action(
 			'init',
 			function () {
-				register_block_type( $this->theme_path . '/src/Blocks/afca-query-with-template-part' );
-				register_block_type( $this->theme_path . '/src/Blocks/afca-meta-field-block' );
+				register_block_type( $this->theme_path . '/src/Blocks/QueryWithTemplatePart' );
+				register_block_type( $this->theme_path . '/src/Blocks/MetaFieldBlock' );
 			}
 		);
 
-		wp_set_script_translations( 'afca-query-with-template-part-editor-script', 'afca-query-with-template-part', $this->theme_path . '/inc/afca-query-with-template-part' );
-		wp_set_script_translations( 'afca-meta-field-block-editor-script', 'afca-meta-field-block', $this->theme_path . '/inc/afca-meta-field-block' );
-
+		wp_set_script_translations( 'afca-query-with-template-part-editor-script', 'afca-query-with-template-part', $this->theme_path . '/src/Blocks/QueryWithTemplatePart' );
+		wp_set_script_translations( 'afca-meta-field-block-editor-script', 'afca-meta-field-block', $this->theme_path . '/src/Blocks/MetaFieldBlock' );
 	}
 }
