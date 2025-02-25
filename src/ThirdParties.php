@@ -15,6 +15,10 @@ class ThirdParties {
 	 */
 
 	public function __construct( array $plugins_list ) {
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
 		$this->required_plugins = $plugins_list;
 		$this->check_missing_plugins();
 	}
