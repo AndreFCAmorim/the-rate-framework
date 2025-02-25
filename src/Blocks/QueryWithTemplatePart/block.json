@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "afca-blocks/query-with-template-part",
+  "version": "0.1.0",
+  "title": "Query With Template Part",
+  "category": "theme",
+  "icon": "editor-table",
+  "description": "Allow template part block inside WP default query loop block.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "afca-query-with-template-part",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "parent": [
+    "core/post-template"
+  ]
+}
